@@ -1,4 +1,5 @@
 import React from "react";
+import ButtonAnime from "./components/ButtonAnime";
 import HeaderAnime from "./components/HeaderAnime";
 import Logo from "./components/LogoAnime";
 
@@ -7,6 +8,7 @@ function App() {
     <>
       <HeaderAnime>
         <Logo/>
+        <ButtonAnime>Novo Anime</ButtonAnime>
       </HeaderAnime>
     </>
   );
