@@ -53,12 +53,4 @@ table {
 html, body{
 	font-size: 1px;
 	min-width: 320px;
-
-}
-
-#root{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	min-height: 100vh;
 }

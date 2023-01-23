@@ -1,18 +1,26 @@
 import styled from "styled-components";
+import container from "../../tools/container";
 import ButtonAnime from "../ButtonAnime";
 import Logo from "../LogoAnime";
 
-const HeaderAnime = styled.header`
+export const HeaderAnime = styled.header`
+    padding: 20rem 0;
+    border-bottom: 4px solid #2a7ae4;
+    background-color: var(--color-black-dark);
+
+    @media(max-width: 800px){
+        padding: 15rem 16rem;
+    }
+`;
+
+export const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 30px;
-    background-color: var(--color-black-dark);
-    border-bottom: 4px solid #2a7ae4;
+    ${container};
 
-    @media(max-width: 600px){
+    @media(max-width: 800px){
         justify-content: center;
-        padding: 15px 16px;
 
         & > ${Logo}{
             height: 35px;
@@ -26,8 +34,9 @@ const HeaderAnime = styled.header`
             border-radius: 0;
             background-color: var(--color-primary-medium);
         }
-    }
+     }
+
+     
 
 `;
 
-export default HeaderAnime;
