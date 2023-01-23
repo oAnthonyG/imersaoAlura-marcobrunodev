@@ -1,4 +1,5 @@
 import React from "react";
+import DescriptionAnime from "./components";
 import BannerAnime from "./components/BannerAnime";
 import ButtonAnime from "./components/ButtonAnime";
 import FooterAnime from "./components/FooterAnime";
@@ -18,6 +19,9 @@ function App() {
       <BannerAnime>
         <TagAnime>Animes</TagAnime>
         <TitleAnime>One Punch Man</TitleAnime>
+        <DescriptionAnime>One Punch-Man é uma série de webcomic criada pelo autor com o pseudónimo One,
+          e é publicada desde 2009.A série rapidamente tornou-se um fenómeno viral,
+          alcançando mais de 7,9 milhões de acessos, em junho de 2012</DescriptionAnime>
       </BannerAnime>
 
       <FooterAnime>
