@@ -1,15 +1,15 @@
 import React from "react";
 import { HeaderAnime, Wrapper } from "./components/HeaderAnime";
-import DescriptionAnime from "./components";
-import BannerAnime from "./components/BannerAnime";
-import ButtonAnime from "./components/ButtonAnime";
-import FooterAnime from "./components/FooterAnime";
-import LinkAnime from "./components/LinkAnime";
 import Logo from "./components/LogoAnime";
-import TagAnime from "./components/TagAnime";
-import ThumbAnime from "./components/ThumbAnime";
+import ButtonAnime from "./components/ButtonAnime";
+import { BannerAnime, Text } from "./components/BannerAnime";
 import TitleAnime from "./components/TitleAnime";
+import LinkAnime from "./components/LinkAnime";
+import TagAnime from "./components/TagAnime";
+import DescriptionAnime from "./components";
+import ThumbAnime from "./components/ThumbAnime";
 import onePunchMan from "./assets/imgs/one-punch-man-capa.png"
+import FooterAnime from "./components/FooterAnime";
 
 function App() {
   return (
@@ -20,12 +20,17 @@ function App() {
           <ButtonAnime>Novo Anime</ButtonAnime>
         </Wrapper>
       </HeaderAnime>
+
       <BannerAnime>
-        <TagAnime>Animes</TagAnime>
-        <TitleAnime>One Punch Man</TitleAnime>
-        <DescriptionAnime>One Punch-Man é uma série de webcomic criada pelo autor com o pseudónimo One
-        </DescriptionAnime>
-        <ThumbAnime src={onePunchMan} />
+        <Text>
+          <TagAnime>Animes</TagAnime>
+          <TitleAnime>One Punch Man</TitleAnime>
+          <DescriptionAnime>One Punch-Man é uma série de webcomic criada pelo autor com o pseudónimo One,
+            e é publicada desde 2009. A série rapidamente tornou-se um fenómeno viral, alcançando mais de
+            7,9 milhões de acessos, em junho de 2012</DescriptionAnime>
+        </Text>
+
+        <ThumbAnime src={onePunchMan} alt="Imagem do anime" />
       </BannerAnime>
 
       <FooterAnime>
