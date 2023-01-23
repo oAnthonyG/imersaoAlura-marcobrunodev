@@ -6,7 +6,7 @@ const HeaderAnime = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 40px;
+    padding: 20px 30px;
     background-color: var(--color-black-dark);
     border-bottom: 4px solid #2a7ae4;
 
