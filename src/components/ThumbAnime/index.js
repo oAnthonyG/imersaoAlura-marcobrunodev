@@ -1,11 +1,15 @@
-import styled from "styled-components";
+import React from "react";
+import { Avatar, Thumb, WrapperThumb } from "./styles";
 
+function ThumbAnime({src, alt, avatar, animeName}){
+    
+    return (
+        <WrapperThumb>
+            <Thumb src={src} alt={alt} />
+            <Avatar src={avatar} alt={animeName} />
+        </WrapperThumb>
 
-const ThumbAnime = styled.img`
-    width: 640px;
-    border-radius:  4rem;
-    border: 4rem solid var(--color-blue100);
-
-`;
+    );
+}
 
 export default ThumbAnime;

@@ -5,7 +5,7 @@ import Logo from "../LogoAnime";
 
 export const HeaderAnime = styled.header`
     padding: 20rem 0;
-    border-bottom: 4px solid #2a7ae4;
+    border-bottom: 4px solid var(--color-primary-medium);
     background-color: var(--color-black-dark);
 
     @media(max-width: 800px){

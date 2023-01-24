@@ -10,6 +10,7 @@ import DescriptionAnime from "./components";
 import ThumbAnime from "./components/ThumbAnime";
 import onePunchMan from "./assets/imgs/one-punch-man-capa.png"
 import FooterAnime from "./components/FooterAnime";
+import saitama from "./assets/imgs/saitama.jpg"
 
 function App() {
   return (
@@ -30,7 +31,12 @@ function App() {
             7,9 milhões de acessos, em junho de 2012</DescriptionAnime>
         </Text>
 
-        <ThumbAnime src={onePunchMan} alt="Imagem do anime" />
+        <ThumbAnime 
+        src={onePunchMan} 
+        alt="Imagem do anime" 
+        avatar={saitama}
+        animename="One Punch man"
+        />
       </BannerAnime>
 
       <FooterAnime>
