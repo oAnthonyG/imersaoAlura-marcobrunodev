@@ -18,21 +18,25 @@ export const Avatar = styled.img`
 
 export const Thumb = styled.img`
     width: 100%;
+    
+   
 `;
 
 export const WrapperThumb = styled.figure`
-    --space: 10rem;
+   
+
     position: relative;
     width: 640px;
     border-radius:  4rem;
     overflow: hidden;
     cursor: pointer;
     transition: transform 100ms linear;
-    border: 4rem solid var(--color-blue100);
+    background-color: var(--color-blue100);
+    border: var(--border) solid var(--color-blue100);
+
 
     &:hover{
-        --move: calc(var(--space) * -1);
-        transform: scale(1.015);
+        transform: translate(var(--move-space), var(--move-space));
 
 
         & > ${Avatar}{
@@ -44,3 +48,30 @@ export const WrapperThumb = styled.figure`
 
 `;
 
+export const Background = styled.div`
+    --space: 10rem;
+    --border: 4rem;
+    --move-space: calc(var(--space) * -1);
+    
+    position: relative;
+    background-color: var(--color-blue100);
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: var(--space);
+        height: var(--space);
+        background-color: red;
+        transform-origin: right top;
+        transition: transform 100ms linear;
+    }
+
+    &:hover{
+        &::before{
+            transform: rotate(45deg);
+        }
+    }
+
+`;
