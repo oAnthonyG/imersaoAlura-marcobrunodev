@@ -27,7 +27,6 @@ export const WrapperThumb = styled.figure`
 
     position: relative;
     width: 640px;
-    border-radius:  4rem;
     overflow: hidden;
     cursor: pointer;
     transition: transform 100ms linear;
@@ -35,16 +34,7 @@ export const WrapperThumb = styled.figure`
     border: var(--border) solid var(--color-blue100);
 
 
-    &:hover{
-        transform: translate(var(--move-space), var(--move-space));
-
-
-        & > ${Avatar}{
-            opacity: 1;
-            transform: translateX(0);
-            transition: transform 100ms 150ms linear, opacity 300ms 150ms linear;
-        }
-    }
+    
 
 `;
 
@@ -56,21 +46,49 @@ export const Background = styled.div`
     position: relative;
     background-color: var(--color-blue100);
 
-    &::before {
+    &::before, 
+    &::after {
         content: '';
         position: absolute;
+        width: calc(var(--space) * 1.4);
+        height: calc(var(--space) * 1.4);
+        background-color: var(--color-blue100);
+        
+        transition: transform 60ms linear;
+    }
+
+    &::before{
         right: 0;
         top: 0;
-        width: var(--space);
-        height: var(--space);
-        background-color: red;
         transform-origin: right top;
-        transition: transform 100ms linear;
+        transform: rotate(45deg) scale(0);
     }
+
+    &::after{
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transform-origin: left bottom;
+        transform: rotate(-45deg) scale(0);
+    }
+
 
     &:hover{
         &::before{
-            transform: rotate(45deg);
+            transform: rotate(45deg) scale(1);
+        }
+        &::after{
+            transform: rotate(-45deg) scale(1);
+        }
+
+        & > ${WrapperThumb}{ 
+            transform: translate(var(--move-space), var(--move-space));
+
+            & > ${Avatar}{
+                opacity: 1;
+                transform: translateX(0);
+                transition: transform 100ms 150ms linear, opacity 300ms 150ms linear;
+            }
         }
     }
 
