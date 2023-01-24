@@ -21,18 +21,24 @@ export const Thumb = styled.img`
 `;
 
 export const WrapperThumb = styled.figure`
+    --space: 10rem;
     position: relative;
     width: 640px;
     border-radius:  4rem;
     overflow: hidden;
     cursor: pointer;
+    transition: transform 100ms linear;
     border: 4rem solid var(--color-blue100);
 
     &:hover{
+        --move: calc(var(--space) * -1);
+        transform: scale(1.015);
+
+
         & > ${Avatar}{
             opacity: 1;
             transform: translateX(0);
-            transition: transform 100ms linear, opacity 300ms linear;
+            transition: transform 100ms 150ms linear, opacity 300ms 150ms linear;
         }
     }
 
