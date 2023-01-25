@@ -35,7 +35,7 @@ function App() {
         src={onePunchMan} 
         alt="Imagem do anime" 
         avatar={saitama}
-        animeName="One Punch man"
+        animeName="One Punch-Man"
         />
       </BannerAnime>
 

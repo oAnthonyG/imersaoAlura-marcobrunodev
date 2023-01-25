@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 export const Anime = styled.figcaption`
 font-size: 20rem;
+font-weight: bold;
+text-shadow: 2px 2px var(--color-black-dark);
 color: var(--color-gray-light);
 
 `;
