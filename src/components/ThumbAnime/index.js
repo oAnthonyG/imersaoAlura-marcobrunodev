@@ -1,5 +1,6 @@
 import React from "react";
-import { Avatar, Background, Thumb, WrapperThumb } from "./styles";
+import AvatarAnime from "../AvatarAnime";
+import { Anime, Avatar, Background, Thumb, WrapperThumb } from "./styles";
 
 function ThumbAnime({ src, alt, avatar, animeName }) {
 
@@ -7,7 +8,7 @@ function ThumbAnime({ src, alt, avatar, animeName }) {
         <Background>
             <WrapperThumb>
                 <Thumb src={src} alt={alt} />
-                <Avatar src={avatar} alt={animeName} />
+                <AvatarAnime photo={avatar} animeName={animeName} />
             </WrapperThumb>
         </Background>
 

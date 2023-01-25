@@ -8,7 +8,7 @@ import LinkAnime from "./components/LinkAnime";
 import TagAnime from "./components/TagAnime";
 import DescriptionAnime from "./components";
 import ThumbAnime from "./components/ThumbAnime";
-import onePunchMan from "./assets/imgs/one-punch-man-capa.png"
+import onePunchMan from "./assets/imgs/poster.jpg"
 import FooterAnime from "./components/FooterAnime";
 import saitama from "./assets/imgs/saitama.jpg"
 
@@ -35,7 +35,7 @@ function App() {
         src={onePunchMan} 
         alt="Imagem do anime" 
         avatar={saitama}
-        animename="One Punch man"
+        animeName="One Punch man"
         />
       </BannerAnime>
 

@@ -2,6 +2,7 @@
     --color-black-dark: #000;
     --color-gray-light: #f5f5f5;
     --color-primary-medium: #e91e1e;
+    --color-black-medium: rgba(0, 0, 0, .6);
 
     --color-blue100: #6BD1FF;
 
@@ -15,4 +16,6 @@
     --color-pink100: #DC6EBE;
     
     --color-purple100: #6B5BE2;
+
+    --color-pixelart: #f91c24;
 }
