@@ -18,7 +18,7 @@ function App() {
       <HeaderAnime>
         <Wrapper>
           <Logo />
-          <ButtonAnime>Novo Anime</ButtonAnime>
+          <ButtonAnime as="a" href="/video" >Novo Anime</ButtonAnime>
         </Wrapper>
       </HeaderAnime>
 
