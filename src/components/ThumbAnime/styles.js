@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 import styled from 'styled-components';
 import { WrapperAvatar } from '../AvatarAnime/styles';
 
