@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { WrapperAvatar } from "../AvatarAnime/styles";
-
+/* eslint-disable linebreak-style */
+import styled from 'styled-components';
+import { WrapperAvatar } from '../AvatarAnime/styles';
 
 export const Thumb = styled.img`
     width: 100%;
