@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import container from "../../tools/container";
 import TagAnime from "../TagAnime";
-import ThumbAnime from "../ThumbAnime";
 import TitleAnime from "../TitleAnime";
-
 
 export const Text = styled.div`
     max-width: 45%;

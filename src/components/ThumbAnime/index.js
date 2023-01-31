@@ -17,11 +17,6 @@ function ThumbAnime({
   );
 }
 
-ThumbAnime.propTypes = {
-  src: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-  avatar: PropTypes.string.animeName.isRequired,
-  animeName: PropTypes.string.isRequired,
-};
+
 
 export default ThumbAnime;
