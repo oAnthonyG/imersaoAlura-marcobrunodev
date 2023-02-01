@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import container from '../../tools/container';
+import container from '../../styles/tools/container';
 import ButtonAnime from '../ButtonAnime';
 import Logo from '../LogoAnime';
 
@@ -29,6 +29,7 @@ export const Wrapper = styled.div`
     & > ${ButtonAnime} {
       width: 100vw;
       position: fixed;
+      text-align: center;
       border: 0;
       bottom: 0;
       border-radius: 0;
