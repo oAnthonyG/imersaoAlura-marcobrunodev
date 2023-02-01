@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import AvatarAnime from '../AvatarAnime';
 import { Background, Thumb, WrapperThumb } from './styles';
 
-function ThumbAnime({
-  src, alt, avatar, animeName,
-}) {
+function ThumbAnime({ src, alt, avatar, animeName }) {
   return (
     <Background>
       <WrapperThumb>
@@ -13,10 +11,12 @@ function ThumbAnime({
         <AvatarAnime photo={avatar} animeName={animeName} />
       </WrapperThumb>
     </Background>
-
   );
 }
-
-
-
+ThumbAnime.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  animeName: PropTypes.string.isRequired,
+};
 export default ThumbAnime;
