@@ -18,7 +18,9 @@ function App() {
       <HeaderAnime>
         <Wrapper>
           <Logo />
-          <ButtonAnime as="a" href="/video">Novo Anime</ButtonAnime>
+          <ButtonAnime as="a" href="/video">
+            Novo Anime
+          </ButtonAnime>
         </Wrapper>
       </HeaderAnime>
 
@@ -27,9 +29,10 @@ function App() {
           <TagAnime>Animes</TagAnime>
           <TitleAnime>One Punch Man</TitleAnime>
           <DescriptionAnime>
-            One Punch-Man é uma série de webcomic criada pelo autor com o pseudónimo One,
-            e é publicada desde 2009. A série rapidamente tornou-se um fenómeno viral,
-            alcançando mais de 7,9 milhões de acessos, em junho de 2012
+            One Punch-Man é uma série de webcomic criada pelo autor com o
+            pseudónimo One, e é publicada desde 2009. A série rapidamente
+            tornou-se um fenómeno viral, alcançando mais de 7,9 milhões de
+            acessos, em junho de 2012
           </DescriptionAnime>
         </Text>
 
@@ -44,10 +47,7 @@ function App() {
       <FooterAnime>
         <Logo />
         <p>
-          Site feito por
-          {' '}
-          <LinkAnime href="#">Anthony Guilherme</LinkAnime>
-          {' '}
+          Site feito por <LinkAnime href="#">Anthony Guilherme</LinkAnime>{' '}
         </p>
       </FooterAnime>
     </>

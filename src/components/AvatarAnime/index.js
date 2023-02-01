@@ -8,10 +8,7 @@ function AvatarAnime({ photo, animeName }) {
       <Avatar src={photo} alt={animeName} />
       <Anime>{animeName}</Anime>
     </WrapperAvatar>
-
   );
 }
-
-
 
 export default AvatarAnime;

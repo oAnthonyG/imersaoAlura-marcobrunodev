@@ -16,5 +16,5 @@ root.render(
         <Route path="/video" element={<Video />} />
       </Routes>
     </BrowserRouter>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
