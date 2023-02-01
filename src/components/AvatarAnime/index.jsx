@@ -11,4 +11,9 @@ function AvatarAnime({ photo, animeName }) {
   );
 }
 
+AvatarAnime.propTypes = {
+  photo: PropTypes.string.isRequired,
+  animeName: PropTypes.string.isRequired,
+};
+
 export default AvatarAnime;

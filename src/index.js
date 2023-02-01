@@ -1,11 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import App from './App.jsx';
 
 import './styles/settings/colors.css';
 import './styles/reset.css';
-import Video from './pages/videos/index.js';
+import App from './App';
+import Video from './pages/videos';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
