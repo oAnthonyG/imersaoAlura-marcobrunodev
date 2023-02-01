@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
 const ButtonAnime = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   font-size: 16rem;
   padding: 12rem 30rem;
   border-radius: 4px;
@@ -9,16 +13,25 @@ const ButtonAnime = styled.button`
   color: var(--color-gray-light);
   background-color: var(--color-black-dark);
   border: 1px solid var(--color-gray-light);
-  transition: background-color 200ms linear,
-    transform 200ms cubic-bezier(0, 0, 0.73, 2.24);
+  overflow: hidden;
 
-  &:hover {
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-color: var(--color-primary-medium);
-    transform: scale(1.1);
+    transform: translateX(-100%);
+    transition: transform 300ms linear;
   }
-  &:active {
-    transition: background-color 200ms linear, transform 100ms linear;
-    transform: scale(0.95);
+
+  &:after {
+    content: '${({ children }) => children}';
+    position: absolute;
+  }
+
+  &:hover::before {
+    transform: translateX(0);
   }
 `;
 
