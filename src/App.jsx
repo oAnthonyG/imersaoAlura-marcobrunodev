@@ -6,7 +6,7 @@ import { BannerAnime, Text } from './components/BannerAnime';
 import TitleAnime from './components/TitleAnime';
 import LinkAnime from './components/LinkAnime';
 import TagAnime from './components/TagAnime';
-import DescriptionAnime from './components';
+import DescriptionAnime from './components/DescriptionAnime';
 import ThumbAnime from './components/ThumbAnime';
 import onePunchMan from './assets/imgs/poster.jpg';
 import FooterAnime from './components/FooterAnime';

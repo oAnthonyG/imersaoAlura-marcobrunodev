@@ -4,6 +4,7 @@ const ButtonAnime = styled.button`
   font-size: 16rem;
   padding: 12rem 30rem;
   border-radius: 4px;
+  text-decoration: none;
   cursor: pointer;
   color: var(--color-gray-light);
   background-color: var(--color-black-dark);
