@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import container from '../../styles/tools/container';
 import ButtonAnime from '../ButtonAnime';
-import Logo from '../LogoAnime';
+import LogoAnimeList from '../LogoAnime';
 
 export const HeaderAnime = styled.header`
   padding: 20rem 0;
@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
   @media (max-width: 800px) {
     justify-content: center;
 
-    & > ${Logo} {
+    & > ${LogoAnimeList} {
       height: 35px;
     }
 
