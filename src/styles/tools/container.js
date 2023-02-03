@@ -3,7 +3,7 @@ const container = `
     margin-left: auto;
     margin-right: auto;
 
-    @media(max-width: 1360px) {
+    @media(max-width: 1325px) {
         padding-left: 16rem;
         padding-right: 16rem;
     }

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import container from '../../styles/tools/container';
 import DescriptionAnime from '../DescriptionAnime';
 import TagAnime from '../TagAnime';
 
@@ -7,15 +6,14 @@ const SectionAnime = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20rem;
-  padding-bottom: 20rem;
-  ${container};
+  padding-bottom: 50rem;
 
   & > ${TagAnime} {
     margin-bottom: 20rem;
   }
 
   & > ${TagAnime}:not(:first-child) {
+    margin-left: 30rem;
     align-self: flex-start;
   }
 

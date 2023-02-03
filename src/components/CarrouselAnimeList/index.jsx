@@ -1,17 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { CarrouselStyle, Right } from './styles';
 import ThumbAnime from '../ThumbAnime';
 
 function CarrouselAnimeList({ videos }) {
-  const { src, alt, avatar, animeName, link } = videos[0];
   return (
-    <ThumbAnime
-      src={src}
-      alt={alt}
-      avatar={avatar}
-      animeName={animeName}
-      link={link}
-    />
+    <CarrouselStyle>
+      {videos.map(({ src, alt, avatar, animeName, link }) => (
+        <ThumbAnime
+          src={src}
+          alt={alt}
+          avatar={avatar}
+          animeName={animeName}
+          link={link}
+        />
+      ))}
+      <Right />
+    </CarrouselStyle>
   );
 }
 

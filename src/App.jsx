@@ -40,6 +40,20 @@ const videos = [
     animeName: 'One Punch-Man',
     link: 'https://www.youtube.com/watch?v=ITNqVYll2oA&t=14s',
   },
+  {
+    src: onePunchMan,
+    alt: 'Imagem do anime',
+    avatar: saitama,
+    animeName: 'One Punch-Man',
+    link: 'https://www.youtube.com/watch?v=ITNqVYll2oA&t=14s',
+  },
+  {
+    src: onePunchMan,
+    alt: 'Imagem do anime',
+    avatar: saitama,
+    animeName: 'One Punch-Man',
+    link: 'https://www.youtube.com/watch?v=ITNqVYll2oA&t=14s',
+  },
 ];
 
 function App() {
