@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { CarrouselStyle, Right, Wrapper } from './styles';
 import ThumbAnime from '../ThumbAnime';
 
 function CarrouselAnimeList({ videos }) {
+  const [moveRight, setMoveRight] = useState(false);
+
+  function actionRight() {
+    setMoveRight(true);
+  }
   return (
     <CarrouselStyle>
-      <Wrapper>
+      <Wrapper moveRight={moveRight}>
         {videos.map(({ src, alt, avatar, animeName, link }) => (
           <ThumbAnime
             src={src}
@@ -17,7 +22,7 @@ function CarrouselAnimeList({ videos }) {
           />
         ))}
       </Wrapper>
-      <Right />
+      <Right onClick={actionRight} />
     </CarrouselStyle>
   );
 }
