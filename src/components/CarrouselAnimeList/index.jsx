@@ -1,17 +1,22 @@
+/* eslint-disable react/jsx-no-bind */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { CarrouselStyle, Right, Wrapper } from './styles';
+import { CarrouselStyle, Left, Right, Wrapper } from './styles';
 import ThumbAnime from '../ThumbAnime';
 
 function CarrouselAnimeList({ videos }) {
-  const [moveRight, setMoveRight] = useState(false);
+  const [move, setMove] = useState(false);
 
   function actionRight() {
-    setMoveRight(true);
+    setMove((oldMove) => oldMove - 1);
+  }
+  function actionLeft() {
+    setMove((oldMove) => oldMove + 1);
   }
   return (
     <CarrouselStyle>
-      <Wrapper moveRight={moveRight}>
+      <Left onClick={actionLeft} />
+      <Wrapper move={move}>
         {videos.map(({ src, alt, avatar, animeName, link }) => (
           <ThumbAnime
             src={src}

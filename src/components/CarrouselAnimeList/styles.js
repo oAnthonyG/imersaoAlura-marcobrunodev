@@ -9,21 +9,20 @@ export const Wrapper = styled.div`
   & > ${Background} {
     margin-right: 12rem;
   }
-  ${({ moveRight }) =>
-    moveRight &&
+  ${({ move }) =>
+    move &&
     css`
-      transform: translateX(calc(var(--thumb-width) * -1));
+      transform: translateX(calc(var(--thumb-width) * ${move}));
     `}
 `;
-
-export const Right = styled.button`
+const Arrow = css`
   position: absolute;
   width: 50rem;
   height: calc(100% - var(--space-top-bottom) * 2);
-  right: 0;
   opacity: 0;
   border: none;
   cursor: pointer;
+  z-index: 1;
   background-color: var(--color-black-medium);
   transition: opacity 200ms linear;
 
@@ -32,6 +31,16 @@ export const Right = styled.button`
   }
 `;
 
+export const Right = styled.button`
+  ${Arrow};
+  right: 0;
+`;
+
+export const Left = styled.button`
+  ${Arrow};
+  left: 0;
+  transform: rotate(180deg);
+`;
 export const CarrouselStyle = styled.div`
   --space-top-bottom: 20rem;
   --thumb-width: 296.5px;
@@ -47,7 +56,7 @@ export const CarrouselStyle = styled.div`
     width: var(--thumb-width);
   }
 
-  &:hover > ${Right} {
+  &:hover > ${Right}, &:hover > ${Left} {
     opacity: 0.8;
   }
   & > ${Right}:hover {
