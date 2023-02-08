@@ -5,7 +5,7 @@ import { CarrouselStyle, Left, Right, Wrapper } from './styles';
 import ThumbAnime from '../ThumbAnime';
 
 function CarrouselAnimeList({ videos }) {
-  const [move, setMove] = useState(false);
+  const [move, setMove] = useState(0);
 
   function actionRight() {
     setMove((oldMove) => oldMove - 1);
@@ -13,8 +13,11 @@ function CarrouselAnimeList({ videos }) {
   function actionLeft() {
     setMove((oldMove) => oldMove + 1);
   }
+  function leftShow() {
+    return move < 0;
+  }
   return (
-    <CarrouselStyle>
+    <CarrouselStyle leftShow={leftShow()} rightShow>
       <Left onClick={actionLeft} />
       <Wrapper move={move}>
         {videos.map(({ src, alt, avatar, animeName, link }) => (
