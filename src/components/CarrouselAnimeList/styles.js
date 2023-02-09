@@ -3,16 +3,19 @@ import { Background, WrapperThumb } from '../ThumbAnime/styles';
 import arrow from '../../assets/imgs/arrow.svg';
 
 export const Wrapper = styled.div`
+  --space-right: 12rem;
   display: flex;
   transition: transform 200ms linear;
 
   & > ${Background} {
-    margin-right: 12rem;
+    margin-right: var(--space-right);
   }
   ${({ move }) =>
     move &&
     css`
-      transform: translateX(calc(var(--thumb-width) * ${move}));
+      transform: translateX(
+        calc((var(--thumb-width) + var(--space-right)) * ${move})
+      );
     `}
 `;
 const Arrow = css`
@@ -43,17 +46,19 @@ export const Left = styled.button`
 `;
 export const CarrouselStyle = styled.div`
   --space-top-bottom: 20rem;
-  --thumb-width: 296.5px;
+  --space-right-left: 30rem;
+  --thumb-width: 300px;
   position: relative;
   display: flex;
   align-self: flex-start;
   width: 100%;
   box-sizing: border-box;
-  padding: var(--space-top-bottom) 30rem;
+  padding: var(--space-top-bottom) var(--space-right-left);
   overflow: hidden;
 
   & ${WrapperThumb} {
     width: var(--thumb-width);
+    box-sizing: border-box;
   }
 
   &:hover > ${Right} {
