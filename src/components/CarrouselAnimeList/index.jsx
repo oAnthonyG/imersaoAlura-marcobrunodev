@@ -1,14 +1,24 @@
 /* eslint-disable react/jsx-no-bind */
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useWindowWidth } from '@react-hook/window-size';
 import PropTypes from 'prop-types';
 import { CarrouselStyle, Left, Right, Wrapper } from './styles';
 import ThumbAnime from '../ThumbAnime';
 
 function CarrouselAnimeList({ videos }) {
   const [move, setMove] = useState(0);
+  const [wrapperWidth, setWrapperWidth] = useState();
+  const winWidth = useWindowWidth();
+  const $wrapper = useRef(null);
+
+  useEffect(
+    () => setWrapperWidth($wrapper.current.getBoundingClientRect().width),
+    []
+  );
 
   function actionRight() {
     setMove((oldMove) => oldMove - 1);
+    console.log($wrapper.current.getBoudingClientRect());
   }
   function actionLeft() {
     setMove((oldMove) => oldMove + 1);
@@ -19,7 +29,11 @@ function CarrouselAnimeList({ videos }) {
   return (
     <CarrouselStyle leftShow={leftShow()} rightShow>
       <Left onClick={actionLeft} />
-      <Wrapper move={move}>
+      <Wrapper
+        move={move}
+        moveLastRight={wrapperWidth - winWidth}
+        ref={$wrapper}
+      >
         {videos.map(({ src, alt, avatar, animeName, link }) => (
           <ThumbAnime
             src={src}

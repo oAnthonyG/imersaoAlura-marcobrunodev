@@ -2,21 +2,26 @@ import styled, { css } from 'styled-components';
 import { Background, WrapperThumb } from '../ThumbAnime/styles';
 import arrow from '../../assets/imgs/arrow.svg';
 
+const thumbWidth = 300;
+const spaceRight = 12;
+
+function moveCarousel(move, moveLastRight) {
+  const oneStep = thumbWidth + spaceRight;
+  const wichMove = oneStep > moveLastRight ? moveLastRight : oneStep;
+  return wichMove * move;
+}
+
 export const Wrapper = styled.div`
-  --space-right: 12rem;
+  --space-right: ${spaceRight}rem;
   display: flex;
   transition: transform 200ms linear;
 
   & > ${Background} {
     margin-right: var(--space-right);
   }
-  ${({ move }) =>
-    move &&
-    css`
-      transform: translateX(
-        calc((var(--thumb-width) + var(--space-right)) * ${move})
-      );
-    `}
+  ${({ move, moveLastRight }) => css`
+    transform: translateX(${moveCarousel(move, moveLastRight)}px);
+  `}
 `;
 const Arrow = css`
   position: absolute;
@@ -47,7 +52,7 @@ export const Left = styled.button`
 export const CarrouselStyle = styled.div`
   --space-top-bottom: 20rem;
   --space-right-left: 30rem;
-  --thumb-width: 300px;
+  --thumb-width: ${thumbWidth}px;
   position: relative;
   display: flex;
   align-self: flex-start;
