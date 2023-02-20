@@ -7,7 +7,7 @@ import ThumbAnime from '../ThumbAnime';
 
 function CarrouselAnimeList({ videos }) {
   const [move, setMove] = useState(0);
-  const [wrapperWidth, setWrapperWidth] = useState();
+  const [wrapperWidth, setWrapperWidth] = useState(0);
   const winWidth = useWindowWidth();
   const $wrapper = useRef(null);
 
@@ -18,7 +18,6 @@ function CarrouselAnimeList({ videos }) {
 
   function actionRight() {
     setMove((oldMove) => oldMove - 1);
-    console.log($wrapper.current.getBoudingClientRect());
   }
   function actionLeft() {
     setMove((oldMove) => oldMove + 1);

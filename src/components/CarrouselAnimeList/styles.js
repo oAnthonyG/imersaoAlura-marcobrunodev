@@ -4,11 +4,13 @@ import arrow from '../../assets/imgs/arrow.svg';
 
 const thumbWidth = 300;
 const spaceRight = 12;
+const spaceRightLeft = 30;
 
 function moveCarousel(move, moveLastRight) {
-  const oneStep = thumbWidth + spaceRight;
-  const wichMove = oneStep > moveLastRight ? moveLastRight : oneStep;
-  return wichMove * move;
+  const oneStep = (thumbWidth + spaceRight) * move;
+  const lastStep = (moveLastRight + spaceRightLeft) * -1;
+  const wichMove = oneStep !== 0 && oneStep < lastStep ? lastStep : oneStep;
+  return wichMove;
 }
 
 export const Wrapper = styled.div`
@@ -51,7 +53,7 @@ export const Left = styled.button`
 `;
 export const CarrouselStyle = styled.div`
   --space-top-bottom: 20rem;
-  --space-right-left: 30rem;
+  --space-right-left: ${spaceRightLeft}rem;
   --thumb-width: ${thumbWidth}px;
   position: relative;
   display: flex;
