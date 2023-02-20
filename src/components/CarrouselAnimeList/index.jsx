@@ -22,17 +22,11 @@ function CarrouselAnimeList({ videos }) {
   function actionLeft() {
     setMove((oldMove) => oldMove + 1);
   }
-  function leftShow() {
-    return move < 0;
-  }
+
   return (
-    <CarrouselStyle leftShow={leftShow()} rightShow>
+    <CarrouselStyle move={move} moveLastRight={wrapperWidth - winWidth}>
       <Left onClick={actionLeft} />
-      <Wrapper
-        move={move}
-        moveLastRight={wrapperWidth - winWidth}
-        ref={$wrapper}
-      >
+      <Wrapper ref={$wrapper}>
         {videos.map(({ src, alt, avatar, animeName, link }) => (
           <ThumbAnime
             src={src}
