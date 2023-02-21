@@ -1,6 +1,5 @@
 import React from 'react';
-import { BannerAnime, Text } from './components/BannerAnime';
-import TitleAnime from './components/TitleAnime';
+import BannerAnime from './components/BannerAnime';
 import TagAnime from './components/TagAnime';
 import DescriptionAnime from './components/DescriptionAnime';
 import ThumbAnime from './components/ThumbAnime';
@@ -61,20 +60,16 @@ function App() {
     <>
       <HeaderOpen />
 
-      <BannerAnime>
-        <Text>
-          <TagAnime>Animes</TagAnime>
-          <TitleAnime>Boas vindas a AnimeList</TitleAnime>
-          <DescriptionAnime>
-            Seja bem-vindo ao nosso site! Estamos animados para compartilhar com
-            você as melhores histórias e personagens que cultura a japonesa tem
-            oferecer. Desde ação e aventura até drama e romance, temos tudo o
-            que você precisa para se divertir e se envolver em mundos incríveis.
-            Navegue pelo nosso acervo e descubra descubra seus novos animes
-            favoritos hoje mesmo!
-          </DescriptionAnime>
-        </Text>
-
+      <BannerAnime
+        tag="Animes"
+        title="Boas Vindas a AnimeList"
+        description="Seja bem-vindo ao nosso site! Estamos animados para compartilhar com
+      você as melhores histórias e personagens que cultura a japonesa tem
+      oferecer. Desde ação e aventura até drama e romance, temos tudo o
+      que você precisa para se divertir e se envolver em mundos incríveis.
+      Navegue pelo nosso acervo e descubra descubra seus novos animes
+      favoritos hoje mesmo!"
+      >
         <ThumbAnime
           src={onePunchMan}
           alt="Imagem do anime"

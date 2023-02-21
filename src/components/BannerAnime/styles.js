@@ -16,7 +16,7 @@ export const Text = styled.div`
   }
 `;
 
-export const BannerAnime = styled.section`
+export const BannerStyle = styled.section`
   ${container};
   display: flex;
   justify-content: space-between;
