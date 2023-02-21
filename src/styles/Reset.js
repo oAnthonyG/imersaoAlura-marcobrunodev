@@ -1,3 +1,6 @@
+import { createGlobalStyle } from 'styled-components';
+
+const Reset = createGlobalStyle`
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -135,3 +138,7 @@ body {
   font-size: 1px;
   min-width: 320px;
 }
+
+`;
+
+export default Reset;

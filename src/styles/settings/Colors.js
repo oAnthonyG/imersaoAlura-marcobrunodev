@@ -1,3 +1,6 @@
+import { createGlobalStyle } from 'styled-components';
+
+const Colors = createGlobalStyle`
 :root {
   --color-black-dark: #000;
   --color-gray-light: #f5f5f5;
@@ -19,3 +22,6 @@
 
   --color-pixelart: #f91c24;
 }
+`;
+
+export default Colors;
